@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Person Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}?v=2">
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='dropzone.min.css') }}?v=2">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}?v=2">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Sports Person Classifier</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+        <div class="col card-wrapper" data-player="Alisson_Becker">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="{{ url_for('static', filename='images/Leonal_Messi.jpeg') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Alisson Becker</h4>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-player="maria_sharapova">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="{{ url_for('static', filename='images/Leonal_Messi.jpeg') }}" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Maria Sharapova</h4>
+
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-player="roger_federer">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="{{ url_for('static', filename='images/Leonal_Messi.jpeg') }}" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Roger Federer</h4>
+
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="serena_williams">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="{{ url_for('static', filename='images/Leonal_Messi.jpeg') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Serena Williams</h4>
+
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="virat_kohli">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="{{ url_for('static', filename='images/Leonal_Messi.jpeg') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Virat Kohli</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="{{ url_for('static', filename='images/upload.png') }}" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="submit" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+            </div>
+
+            <div class="col-sm-4" id="resultHolder">
+
+            </div>
+
+            
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="{{ url_for('static', filename='bootstrap.min.js') }}?v=2"></script>
+<script src="{{ url_for('static', filename='google.min.js') }}?v=2"></script>
+<script src="{{ url_for('static', filename='dropzone.min.js') }}?v=2"></script>
+<script src="{{ url_for('static', filename='app.js') }}?v=2"></script>
+</html>
